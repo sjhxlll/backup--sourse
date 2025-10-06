@@ -1,0 +1,39 @@
+{
+    "name": "rodber/php-sse-react",
+    "description": "Streaming, async HTML5 Server-Sent Events server (aka. SSE or EventSource)",
+    "keywords": [
+        "Server-Sent Events",
+        "SSE",
+        "EventSource",
+        "event-driven",
+        "ReactPHP",
+        "async"
+    ],
+    "homepage": "https://github.com/rodber/php-sse-react",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Lück",
+            "email": "christian@lueck.tv"
+        },
+        {
+            "name": "Rodolfo Berrios",
+            "email": "rodolfo@chevere.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Clue\\React\\Sse\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "react/event-loop": "^1.2",
+        "react/http": "^1.5",
+        "react/stream": "^1.2"
+    },
+    "require-dev": {
+        "clue/redis-react": "^2.5",
+        "phpunit/phpunit": "^9.5"
+    }
+}

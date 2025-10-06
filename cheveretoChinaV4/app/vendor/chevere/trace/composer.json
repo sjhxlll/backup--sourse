@@ -1,0 +1,42 @@
+{
+    "name": "chevere/trace",
+    "description": "A chevere trace component.",
+    "homepage": "https://chevere.org",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Rodolfo Berrios",
+            "email": "rodolfo@chevere.org",
+            "homepage": "https://chevere.org"
+        }
+    ],
+    "require": {
+        "chevere/chevere": "^1.0",
+        "chevere/var-dump": "^0.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "symplify/easy-coding-standard": "^10.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chevere\\Trace\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Chevere\\Tests\\Trace\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "update-cs": "curl --create-dirs -O --output-dir .ecs https://raw.githubusercontent.com/chevere/code-style/main/.ecs/ecs-chevere.php"
+    },
+    "scripts-descriptions": {
+        "update-cs": "Update Chevere code style definition"
+    }
+}

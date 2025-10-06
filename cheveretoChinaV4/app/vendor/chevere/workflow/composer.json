@@ -1,0 +1,48 @@
+{
+    "name": "chevere/workflow",
+    "description": "Async workflow procedures for PHP",
+    "homepage": "https://chevere.org",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Rodolfo Berrios",
+            "email": "rodolfo@chevere.org",
+            "homepage": "https://chevere.org"
+        }
+    ],
+    "require": {
+        "amphp/parallel": "^1.4",
+        "chevere/chevere": "^1.0",
+        "psr/container": "^1 || ^2"
+    },
+    "require-dev": {
+        "chevere/var-dump": "^0.6.0",
+        "phpstan/phpstan": "^1.5",
+        "phpunit/phpunit": "^9.5",
+        "symplify/easy-coding-standard": "^10.3"
+    },
+    "autoload": {
+        "files": [
+            "src/functions.php"
+        ],
+        "psr-4": {
+            "Chevere\\Workflow\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Chevere\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "update-cs": "curl --create-dirs -O --output-dir .ecs https://raw.githubusercontent.com/chevere/code-style/main/.ecs/ecs-chevere.php"
+    },
+    "scripts-descriptions": {
+        "update-cs": "Update Chevere code style definition"
+    }
+}

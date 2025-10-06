@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+
+/*
+ * This file is part of CheveretoChina.
+ *
+ * (c) MoeIDC <noreply@itxe.net>
+ *
+ * For the full CheveretoChina and update information, please view the MoeBBS
+ * file that was distributed on https://bbs.idc.moe
+ */
+
+use Psy\Configuration;
+use Psy\Shell;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+try {
+    (new Shell(
+        new Configuration(
+            require __DIR__ . '/../.psysh.php'
+        )
+    ))->run();
+} catch (Throwable $e) {
+    fwrite(STDERR, $e->getMessage(). PHP_EOL);
+}
+
